@@ -4,6 +4,6 @@ $(kubectl get pods -n redis -l app=redis-cluster -o jsonpath='{range.items[*]}{.
 
 Join Cluster Redis
 
-Cluster MEET ip port ( di nodes yang baru )
-for slot in {0..5461}; do redis-cli CLUSTER ADDSLOTS $slot > /dev/null; done; ( di ip yang baru)
+Cluster MEET ip port //in new nodes
+for slot in {0..5461}; do redis-cli CLUSTER ADDSLOTS $slot > /dev/null; done; //in new nodes
 cluster forget id
